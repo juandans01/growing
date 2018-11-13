@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/growing/static/media/test-blue-up.e96b6ca4.svg"
   },
   {
-    "revision": "563e4895a25972704f33",
-    "url": "/growing/static/js/main.563e4895.chunk.js"
+    "revision": "a533b7bfee77ff9e00a8",
+    "url": "/growing/static/js/main.a533b7bf.chunk.js"
   },
   {
     "revision": "67c5c4788669512a6ded",
@@ -26,6 +26,10 @@ self.__precacheManifest = [
   {
     "revision": "a99fd19ca5edf70d8ed71bbb4352fcf7",
     "url": "/growing/static/media/linkedin-dark.a99fd19c.svg"
+  },
+  {
+    "revision": "10c31450e7ae68616ec6237cf49e1264",
+    "url": "/growing/static/media/skype-logo.10c31450.svg"
   },
   {
     "revision": "cef7af89dc67c3feae9a6f6dc0dc2a4e",
@@ -88,6 +92,14 @@ self.__precacheManifest = [
     "url": "/growing/static/media/difference3.45ad147d.svg"
   },
   {
+    "revision": "64aaec3ab3232076ff7f04f115d19573",
+    "url": "/growing/static/media/marian-pic.64aaec3a.jpg"
+  },
+  {
+    "revision": "1b8b1123f743207f05f7e309f7cb9f26",
+    "url": "/growing/static/media/juan-pic.1b8b1123.jpg"
+  },
+  {
     "revision": "f3588efa4a37e1d8840257dcba1c4cdc",
     "url": "/growing/static/media/contact-left.f3588efa.png"
   },
@@ -112,11 +124,11 @@ self.__precacheManifest = [
     "url": "/growing/static/media/linkedin-light.6815f048.svg"
   },
   {
-    "revision": "53a6b307f956cca54464",
-    "url": "/growing/static/js/1.53a6b307.chunk.js"
+    "revision": "09987584c4b166684ab9",
+    "url": "/growing/static/js/1.09987584.chunk.js"
   },
   {
-    "revision": "88c312cb27231687ed3f36a409c6bba8",
+    "revision": "801439d3aa52f95c190e6edd8897f73c",
     "url": "/growing/index.html"
   }
 ];
