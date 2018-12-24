@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Wrapper, BoxWrapper, Items, Item } from './components/Styled';
 import Box from '../../components/Box'
+import AnimatedCircle from '../../components/AnimatedCircle'
 
 import Chatting from '../../../assets/chatting.svg'
 import Accurate from '../../../assets/accurate.svg'
@@ -24,9 +25,18 @@ export default class DNA extends Component {
               <Item>
                 <div className='image-wrapper'>
                   <img src={Chatting} alt='chatting'/>
+                  
                   <div className='circles-1'>
-                    <div></div>
-                    <p></p>
+                    <AnimatedCircle
+                      className='big-circle'
+                      initialPose='none'
+                      pose='attention'
+                    />
+                    <AnimatedCircle
+                      className='small-circle'
+                      initialPose='none'
+                      pose='attention'
+                    />                    
                   </div>
                 </div>
                 
@@ -43,8 +53,16 @@ export default class DNA extends Component {
                 <div className='image-wrapper'>
                   <img src={Accurate} alt='chatting'/>
                   <div className='circles-2'>
-                    <div></div>
-                    <p></p>
+                    <AnimatedCircle
+                      className='big-circle'
+                      initialPose='none'
+                      pose='attention'
+                    />
+                    <AnimatedCircle
+                      className='small-circle'
+                      initialPose='none'
+                      pose='attention'
+                    />
                   </div>
                 </div>                
                 <div>Certeros</div>
@@ -59,8 +77,16 @@ export default class DNA extends Component {
                 <div className='image-wrapper'>
                   <img src={Engaged} alt='chatting'/>
                   <div className='circles-3'>
-                    <div></div>
-                    <p></p>
+                    <AnimatedCircle
+                      className='big-circle'
+                      initialPose='none'
+                      pose='attention'
+                    />
+                    <AnimatedCircle
+                      className='small-circle'
+                      initialPose='none'
+                      pose='attention'
+                    />
                   </div>
                 </div>                
                 <div>Comprometidos</div>
@@ -76,8 +102,16 @@ export default class DNA extends Component {
                 <div className='image-wrapper'>
                   <img src={Agile} alt='chatting'/>
                   <div className='circles-1'>
-                    <div></div>
-                    <p></p>
+                    <AnimatedCircle
+                      className='big-circle'
+                      initialPose='none'
+                      pose='attention'
+                    />
+                    <AnimatedCircle
+                      className='small-circle'
+                      initialPose='none'
+                      pose='attention'
+                    />
                   </div>
                 </div>                       
                 <div>Ágiles</div>
@@ -94,8 +128,16 @@ export default class DNA extends Component {
                 <div className='image-wrapper'>
                   <img src={Flexible} alt='chatting'/>
                   <div className='circles-2'>
-                    <div></div>
-                    <p></p>
+                    <AnimatedCircle
+                      className='big-circle'
+                      initialPose='none'
+                      pose='attention'
+                    />
+                    <AnimatedCircle
+                      className='small-circle'
+                      initialPose='none'
+                      pose='attention'
+                    />
                   </div>
                 </div>                        
                 <div>Flexibles</div>

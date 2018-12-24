@@ -50,7 +50,7 @@ export default class Hero extends Component {
               fontSize="50px"
             >
               Somos<br/>
-              GROWING-HR,
+              GROWING·HR,
             </Title>
             <p>
               consultora de recursos humanos especializada en

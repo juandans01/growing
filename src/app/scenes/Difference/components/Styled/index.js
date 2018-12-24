@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url(${DifferenceBackground}) no-repeat 50% 100% / auto;
+  
 `
 
 export const Differences = styled.div`
@@ -25,7 +25,7 @@ export const Differences = styled.div`
   > div {
     width: 200px;
     padding: 50px;
-    border: 1px solid ${props => props.theme.blueShade};
+    border: 1.5px solid ${props => props.theme.blueShade};
 
     .image {
       display: flex;
@@ -78,6 +78,10 @@ export const Differences = styled.div`
     .number {
       font-weight: 900;
       color: ${props => props.theme.greenShade};
+    }
+
+    .text {
+      text-align: center;
     }
 
     > p {

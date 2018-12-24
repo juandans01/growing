@@ -8,7 +8,6 @@ import Difference1 from '../../../assets/difference1.svg'
 import Difference2 from '../../../assets/difference2.svg'
 import Difference3 from '../../../assets/difference3.svg'
 
-// import Animation from '../../../assets/animate.svg'
 
 
 class Difference extends Component {
@@ -45,7 +44,7 @@ class Difference extends Component {
               </div>
             </div>            
             <p className='number'>01</p>
-            <p>
+            <p className='text'>
               Incorporamos metodologías
               ágiles, que nos brinda la
               flexibilidad necesaria para
@@ -78,7 +77,7 @@ class Difference extends Component {
               </div>
             </div>            
             <p className='number'>02</p>
-            <p>
+            <p className='text'>
               Nos mantenemos
               actualizados sobre las
               nuevas tecnologías y nos
@@ -111,7 +110,7 @@ class Difference extends Component {
               </div>
             </div>            
             <p className='number'>03</p>
-            <p>
+            <p className='text'>
               Conocimiento exhaustivo
               del mercado IT teniendo en
               claro cuáles son las

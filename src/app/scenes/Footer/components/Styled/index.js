@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 import { bp } from '../../../../../helpers/styleHelper'
 
+// background: linear-gradient(to right, ${props => props.theme.blueShade}, ${props => props.theme.greenShade});
 export const Wrapper = styled.div`
   height: 200px;
   ${bp('md')`
     height: auto;
   `}
   width: 100%;
-  background: linear-gradient(to right, ${props => props.theme.blueShade}, ${props => props.theme.greenShade});  
+  background: white;
 `
 export const Logo = styled.div`
   height: 200px;
@@ -17,13 +18,12 @@ export const Logo = styled.div`
   justify-content: center;
   align-items: flex-start;  
   > img {
-    height: 150px;
-    width: 300px;
+    height: 80px;
   }
 `
 
 export const Info = styled.div`
-  color: white;
+  color: ${props => props.theme.blueShade};
   margin-left: 50px;
   height: 200px;
   display: flex;
@@ -31,17 +31,30 @@ export const Info = styled.div`
   align-items: flex-start;
   justify-content: center;
   
+  > div {
+    display:flex;
+    align-items: center;    
+  }
+
   .email {
+    > img {
+      margin-right: 20px;
+      height: 35px;
+    }
     padding: 5px;
   }
 
   .address {
+    > img {
+      margin-right: 20px;
+      height: 35px;
+    }
     padding: 5px;
   }
-  .link {
-    > img {
-      width: 50px;
-      height: 50px;
+
+  .link {    
+    > a {      
+      margin-right: 15px;
     }
   }
 `

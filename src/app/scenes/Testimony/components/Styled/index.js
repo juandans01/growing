@@ -58,6 +58,7 @@ export const SlideContent = styled.div`
     font-style: italic;
     line-height: 1.6;
     width: 500px;
+    min-height: 150px;
     ${bp('ts')`
       width: auto;
       padding: 0 25px;
