@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { Wrapper, LeftForm, LeftQuestion, LeftArrow, RightForm, RightQuestion, RightArrow } from './components/Styled'
+import { Wrapper, LeftForm, LeftQuestion, LeftArrow, RightForm, RightQuestion, RightArrow, StyledSelect, SelectChevron, SelectWrapper } from './components/Styled'
 import LeftArrowSvg from '../../../assets/left-arrow.svg'
 import RightArrowSvg from '../../../assets/right-arrow.svg'
+import RightArrowDarkSvg from '../../../assets/right-dark-arrow.svg'
 import axios from 'axios'
 
 export default class Contact extends Component {
@@ -17,13 +18,14 @@ export default class Contact extends Component {
       changeName: '',
       changeEmail: '',
       changeLinkedin: '',
-      changeSkill: 'JAVA',
+      changeSkill: '',
       rightSuccess: false,
       partnerName: '',
       partnerEmail: '',
       partnerCompany: '',
       partnerLinkedin: '',
     }
+    this.selectRef = React.createRef()
   }
 
   onLeftShowClick = () => {
@@ -60,7 +62,9 @@ export default class Contact extends Component {
 
   onChange = (e) => {
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
+    }, () => {
+      this.selectRef.current.blur()
     })
   }
 
@@ -112,6 +116,13 @@ export default class Contact extends Component {
     const res = await axios.post("https://api.emailjs.com/api/v1.0/email/send", data)    
   }
 
+
+  onSelectClick = () => {
+    console.log('on click')
+    this.setState({
+      selected: !this.state.selected
+    })
+  }
   render(){
     return(
       <Wrapper id='contact'>
@@ -132,27 +143,40 @@ export default class Contact extends Component {
                 <input required name='changeEmail' value={this.state.changeEmail} type='email'  onChange={this.onChange} placeholder='E-mail'/>
               </div>
               <div>
-                <select name='changeSkill' value={this.state.changeSkill} onChange={this.onChange}>              
-                  <option value='JAVA'>JAVA</option>
-                  <option value='PHP'>PHP</option>
-                  <option value='.NET'>.NET</option>
-                  <option value='NODE JS'>NODE JS</option>
-                  <option value='PYTHON'>PYTHON</option>
-                  <option value='RUBY'>RUBY</option>
-                  <option value='REACT'>REACT</option>
-                  <option value='ANGULAR JS'>ANGULAR JS</option>
-                  <option value='VIEW JS'>VIEW JS</option>
-                  <option value='REACT NATIVE'>REACT NATIVE</option>
-                  <option value='IOS'>IOS</option>
-                  <option value='ANDROID'>ANDROID</option>
-                  <option value='IONIC'>IONIC</option>
-                  <option value='HTML & CSS'>HTML & CSS</option>
-                  <option value='SCALA'>SCALA</option>
-                  <option value='AWS'>AWS</option>
-                  <option value='AZURE'>AZURE</option>
-                  <option value='SELENIUM'>CYPRESS</option>
-                  <option value='SOLIDITY'>SOLIDITY</option>
-                </select>
+                <SelectWrapper>
+                  <select name='changeSkill' 
+                    ref={this.selectRef}
+                    value={this.state.changeSkill} onChange={this.onChange} 
+                    onFocus={() => {this.setState({selected: true})}}
+                    onBlur={() => {this.setState({selected: false})}}                    
+                  >
+                    <option value=''>Tecnologias</option>
+                    <option value='JAVA'>JAVA</option>
+                    <option value='PHP'>PHP</option>
+                    <option value='.NET'>.NET</option>
+                    <option value='NODE JS'>NODE JS</option>
+                    <option value='PYTHON'>PYTHON</option>
+                    <option value='RUBY'>RUBY</option>
+                    <option value='REACT'>REACT</option>
+                    <option value='ANGULAR JS'>ANGULAR JS</option>
+                    <option value='VIEW JS'>VIEW JS</option>
+                    <option value='REACT NATIVE'>REACT NATIVE</option>
+                    <option value='IOS'>IOS</option>
+                    <option value='ANDROID'>ANDROID</option>
+                    <option value='IONIC'>IONIC</option>
+                    <option value='HTML & CSS'>HTML & CSS</option>
+                    <option value='SCALA'>SCALA</option>
+                    <option value='AWS'>AWS</option>
+                    <option value='AZURE'>AZURE</option>
+                    <option value='SELENIUM'>CYPRESS</option>
+                    <option value='SOLIDITY'>SOLIDITY</option>                  
+                  </select>
+                  <SelectChevron
+                    customSelected={this.state.selected}
+                    src={RightArrowDarkSvg}
+                    alt='select-chevron'
+                  />
+                </SelectWrapper>         
                 <input value={this.state.changeLinkedin} name='changeLinkedin' type='text' placeholder="URL perfil Linkedin" onChange={this.onChange}/>
               </div>
             </div>,

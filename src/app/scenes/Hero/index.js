@@ -44,7 +44,7 @@ export default class Hero extends Component {
                   </svg>
                 </button>
               </MobileMenu>
-          </MenuWrapper>
+          </MenuWrapper>          
           <Left>
             <Title
               fontSize="50px"

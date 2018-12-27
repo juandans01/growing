@@ -275,3 +275,24 @@ export const RightArrow = styled.div`
     width: 50px;
   }
 `
+export const SelectWrapper = styled.div`
+  position: relative;
+  > select {
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+    padding: 10px 5px;
+    color: ${props => props.theme.greyShade};
+    background-color: #d5efee;
+    margin: 10px;
+    width: 210px;
+  }
+`
+
+export const SelectChevron = styled.img`
+  position: absolute;
+  right: 25px;
+  top: 22px;
+  height: 15px;
+  transform: ${props => props.customSelected ? 'rotate(270deg)' : 'rotate(90deg);'};
+`

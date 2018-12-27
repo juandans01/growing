@@ -4,12 +4,15 @@ import { bp } from '../../../../../helpers/styleHelper'
 export const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
-  height: 800px;
+  height: 550px;
+  ${bp('ts')`
+    height: 650px; 
+  `}
 `
 
 export const BackWrapper = styled.div`
   z-index: 1;
-  min-height: 600px;
+  min-height: 500px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -23,7 +26,7 @@ export const BackWrapper = styled.div`
 `
 
 export const Left = styled.div`
-  width: 400px;
+  width: 400px;  
   ${bp('ts')`
     width: auto;
     padding: 20px;
@@ -48,12 +51,13 @@ export const Right = styled.div`
 export const Dots = styled.img`
   z-index: 1;
   position: absolute;
-  ${bp('ts')`
-    height: 500px;
-  `}
-  height: 700px;
+  height: 400px;
   right: -100px;
-  bottom: 0px;
+  bottom: -20px;
+  ${bp('ts')`
+    height: 300px;
+    bottom: 0;
+  `}
 `
 
 export const MenuWrapper = styled.div`
